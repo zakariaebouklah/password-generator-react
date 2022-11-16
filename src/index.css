@@ -1,13 +1,48 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+
+    .container {
+        @apply w-[570px] h-[570px] flex flex-row justify-center justify-items-center bg-white shadow-3xl rounded-2xl;
+    }
+    .form {
+        @apply p-12 flex flex-col justify-items-center justify-center space-y-7 w-full h-full;
+    }
+    .result {
+        @apply flex flex-row w-96 relative;
+    }
+    .input {
+        @apply
+        p-2.5 shadow-inner bg-black/5 rounded-md placeholder:italic
+        w-[434px] focus:placeholder-black/75 focus:outline-none;
+    }
+    .input-number {
+        @apply
+        p-2.5 shadow-inner bg-black/5 rounded-tr-md rounded-br-md placeholder:italic
+        w-12 focus:outline-none bg-gray-700 text-orange-600 justify-self-end;
+    }
+    .ic-clip-board {
+        @apply bg-gray-700 text-orange-600 relative -left-2
+        rounded-tr-md rounded-br-md
+        h-11 w-14 text-center flex flex-col justify-self-end p-1.5;
+    }
+    .field {
+        @apply flex flex-row w-full relative;
+    }
+    .label {
+        @apply p-2.5 italic bg-black/5 w-full
+        rounded-tl-md rounded-bl-md;
+    }
+    .input-checkbox {
+        @apply accent-orange-600 my-[1px]
+        p-2.5 shadow-inner bg-black/5 rounded-tr-md rounded-br-md placeholder:italic
+        w-12 focus:outline-none bg-gray-700 text-orange-600 justify-self-end
+        focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2;
+    }
+    .btn {
+        @apply w-full h-16 bg-gray-500 rounded-md border-2 border-orange-600
+        hover:bg-orange-600 hover:text-white transition-all ease-in-out delay-75 duration-300;
+    }
 }
