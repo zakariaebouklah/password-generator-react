@@ -5,7 +5,9 @@
 @layer components {
 
     .container {
-        @apply w-[570px] h-[570px] flex flex-row justify-center justify-items-center bg-white shadow-3xl rounded-2xl;
+        @apply w-[570px] h-[570px]
+        flex flex-row justify-center justify-items-center
+        bg-white shadow-3xl rounded-2xl;
     }
     .form {
         @apply p-12 flex flex-col justify-items-center justify-center space-y-7 w-full h-full;
@@ -26,7 +28,8 @@
     .ic-clip-board {
         @apply bg-gray-700 text-orange-600 relative -left-2
         rounded-tr-md rounded-br-md
-        h-11 w-14 text-center flex flex-col justify-self-end p-1.5;
+        h-11 w-14 text-center flex flex-col justify-self-end p-1.5
+        cursor-pointer;
     }
     .field {
         @apply flex flex-row w-full relative;
