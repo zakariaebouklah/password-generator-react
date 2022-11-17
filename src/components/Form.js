@@ -63,6 +63,9 @@ function Form(props) {
         {
             setResult(generatedPassword);
         }
+        else {
+            toast.error("Select al least 1 criteria to generate a password")
+        }
 
     }
 
