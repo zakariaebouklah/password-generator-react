@@ -92,13 +92,12 @@ function Form(props) {
         <form id="pg-form" className="form" onSubmit={handleSubmit}>
 
             <div className="result">
-                <div>
-                    <input className="input"
-                           type="text"
-                           placeholder="Minimum length of password is 7 characters"
-                           value={result}
-                           readOnly={true}/>
-                </div>
+                <input
+                    className="input"
+                    type="text"
+                    placeholder="Minimum length of password is 7 characters"
+                    value={result}
+                    readOnly={true}/>
                 <div className="ic-clip-board" onClick={handleClipBoard}>
                     <IoMdClipboard size={35}/>
                 </div>
